@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+</head>
+<body>
+<!-- header.jsp의 내용을 여기에 넣으세요. -->
+<!-- left-panel.jsp의 내용을 여기에 넣으세요. -->
+<div id="main" role="main">
+    <div id="content">
+        <section id="widget-grid">
+            <h2>코드관리</h2>
+            <div class="row" id="searchForm">
+                <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="well" id="wid-id-0" data-widget-editbutton="false">
+                        <div>
+                            <form id="form" name="form" class="smart-form" onsubmit="return false;">
+                                <table class="table-search table table-bordered table-type2">
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="*">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>검색어</th>
+                                        <td>
+                                            <select class="form-control wid100" id="searchCondition" name="searchCondition">
+                                                <option value="upCode">상위코드</option>
+                                                <option value="code">코드</option>
+                                                <option value="codeName">코드명</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input class="form-control wid100" name="searchText" type="text">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div>
+                                    <button type="button" class="btn btn-sm btn-default on" onclick="fn_get_CodeManagementList(1);">조회</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="row">
+                <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="well" id="wid-id-0" data-widget-editbutton="false">
+                        <div class="widget-body">
+                            <div class="row">
+                                <table class="table table-bordered table-striped table-hover table-type1 center">
+                                    <colgroup>
+                                        <col style="width: 5%">
+                                        <col style="width: 20%">
+                                        <col style="width: 20%">
+                                        <col style="width: 35%">
+                                        <col style="width: 5%">
+                                        <col style="width: 5%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>상위코드</th>
+                                        <th>코드</th>
+                                        <th>코드명</th>
+                                        <th>코드LV</th>
+                                        <th>사용<br>여부</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="cmCodeManagementListTbody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row center">
+                            <ul class="pagination" id="paginationUi">
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="send-buttons">
+                        <div class="fr">
+                            <a href="#" class="btn btn-sm btn-default on">등록</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // 스크립트 내용은 그대로 두거나 필요에 따라 수정하세요.
+</script>
+</body>
+</html>
